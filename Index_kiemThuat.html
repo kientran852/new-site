@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cổng thông tin Mushoku Tensei</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        #navBar, #Carousel_Mid, #main {
+            width: 100%;
+            display: block;
+            padding-bottom: 2em;
+        }
+
+            #navBar img {
+                width: 200px;
+            }
+
+            #Carousel_Mid img {
+                max-height: 540px;
+                max-width: 1296px;
+            }
+
+            #Carousel_Mid p {
+                color: #000000;
+                text-shadow: 2px 2px 8px #FF0000;
+            }
+
+            #Carousel_Mid button {
+                width: 150px;
+            }
+
+        a {
+            text-decoration: none;
+        }
+
+        #main img {
+            width: 80%;
+        }
+
+        #main p {
+            font-size: 20px;
+        }
+
+        #main2 img {
+            width: 100%;
+        }
+
+        #main2 p {
+            font-size: 16px;
+        }
+
+        #footPage p {
+            color: #ffffff;
+        }
+
+        #myBtn {
+            display: none; /* Mặc định button sẽ được ẩn*/
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99; /* button được ưu tiên hiển thị đè lên các phần khác*/
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+    </style>
+
+</head>
+<body>
+    <button id="myBtn" title="Go to top" class="btn btn-primary">Top</button>
+    <div id="navBar">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="Index.html"><img src="Images/icon_navBar.webp" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Thế giới
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_lichSu.html">Lịch sử</a></li>
+                                <li><a class="dropdown-item" href="Index_diaLy.html">Địa lý</a></li>
+                                <li><a class="dropdown-item" href="Index_kiemThuat.html">Kiếm Thuật</a></li>
+                                <li><a class="dropdown-item" href="Index_phepThuat.html">Pháp thuật</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nhân vật
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Rudeus.html">Rudeus</a></li>
+                                <li><a class="dropdown-item" href="Index_Syl.html">Sylphiette</a></li>
+                                <li><a class="dropdown-item" href="Index_Roxy.html">Roxy</a></li>
+                                <li><a class="dropdown-item" href="Index_Eris.html">Eris</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Media
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Anime.html">Anime</a></li>
+                                <li><a class="dropdown-item" href="Index_LN.html">Light Novel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div id="main">
+        <div class="container border shadow-lg p-3 mb-5 bg-body rounded">
+            <h1>Kiếm Thuật</h1>
+            <hr />
+            <p>Kiếm thuật thời hiện đại được chia làm ba dòng phái chính: <b>Phái Thủy Thần</b>, <b>Phái Kiếm Thần</b>, <b>Phái Bắc Thần</b> . Giống như ma pháp, trình độ trong mỗi dòng phái kiếm thuật cũng phân thành bảy cấp, bao gồm: sơ cấp, trung cấp, thượng cấp, thánh cấp, vương cấp, đế cấp, thần cấp. Các kiếm sĩ tăng cường năng lực thể chất của bản thân bằng cách mặc một thứ gọi là<b> Đấu Khí.</b></p>
+
+        </div>
+        <br />
+        <div class="container border shadow-lg p-3 mb-5 bg-body rounded">
+            <h3>Phái Kiếm Thần</h3>
+            <p>Phái Kiếm Thần chú trọng vào tốc độ và tấn công, được xem là dòng phái kiếm thuật mạnh nhất. Đại bản doanh của môn phái Kiếm Thần nằm ở Thánh Địa của Kiếm, một vùng đất thuộc cực tây bắc của lục địa Trung Tâm.</p>
+
+            <h5>Tổng Quan</h5>
+            <hr />
+            <p>Được xem là đệ nhất kiếm pháp với triết lý "tiên thủ hạ vi cường" (ra tay trước sẽ có lợi), kiếm pháp phái Kiếm Thần luôn nhắm đến đoạt mạng đối phương trước khi đối phương kịp phản ứng. Vì lẽ đó, các đệ tử phái Kiếm Thần thường nóng nảy và hiếu chiến. Các kiếm sĩ môn phái này ưa chuộng những trang phục gọn nhẹ nhằm tăng cường tốc độ và phản xạ trong chiến đấu.</p>
+
+            <p>Tuy mạnh là vậy nhưng đây lại là thứ kiếm pháp trọng công khinh thủ, khi giao đấu với kiếm sĩ cùng trình độ sử dụng kiếm pháp Thuỷ Thần, dòng phái kiếm thuật đối nghịch dòng phái Kiếm Thần. kiếm sĩ Kiếm Thần không có nhiều cơ hội thắng. Tuy nhiên nếu đối phương sử dụng kiếm pháp Bắc Thần chủ yếu dựa vào hoàn cảnh để đối phó, kiếm pháp Kiếm Thần lại tỏ ra ưu thế vượt trội.</p>
+
+            <p>Chưởng môn phái Kiếm Thần được gọi là Kiếm Thần. Một kiếm sĩ môn phái Kiếm Thần khi đánh bại một Kiếm Thần sẽ chiếm được danh hiệu Kiếm Thần. Khi một Kiếm Thần chết vì lý do khác, danh hiệu sẽ thuộc về kiếm sĩ mạnh nhất phái Kiếm Thần bấy giờ, do đó trong môn phái sẽ xảy ra những cuộc đấu đá nội bộ để giành chức chưởng môn.</p>
+            <br />
+            <h5>Chiêu thức</h5>
+            <hr />
+            <ul>
+                <li><b>Vô Âm Thái Đao</b>: chiêu thức thượng cấp của phái Kiếm Thần. Kiếm được vung ở tốc độ âm thanh, đặc trưng là đòn chém không phát ra tiếng động.</li>
+                <li>
+                    <b>Quang Thái Đao</b>: là bí kỹ mạnh nhất của kiếm pháp Kiếm Thần, đây là chiêu thức bậc cao của Vô Âm Thái Đao. Để thi triển, kiếm được cầm chắc trong tay, đấu khí được truyền vào thân kiếm, sau đó một đòn toàn lực chém ra. Người ta nói khi thành thạo, đầu mũi kiếm có thể đạt tới tốc độ ánh sáng. Quang Thái Đao do Kiếm Thần thế hệ đầu tiên sáng tạo ra, ông không màng đến bất cứ kỹ thuật chém nào, chỉ đơn thuần vung kiếm nhanh hơn bất cứ ai và đoạt mạng địch thủ. Quang Thái Đao có tốc độ và uy lực bá đạo đến nỗi dễ dàng xuyên qua giáp và vũ khí, cho nên đối phương rất khó đỡ hoặc tránh né. Sự tồn tại của chiêu thức này là lý do Kiếm Thần kiếm pháp được xem là mạnh nhất trong ba dòng phái.
+                </li>
+                <li>
+                    <b>Quang Phản</b>: bản chất là Quang Thái Đao nhưng đã đổi uy lực lấy tốc độ, đây là chiêu thức duy nhất dùng để khắc chế Quang Thái Đao, đòi hỏi kiếm sĩ có phản xạ cực kỳ cao. Nhắm lúc Quang Thái Đao của đối phương chưa đạt đến tốc độ tối đa, kiếm sĩ sẽ thi triển Quang Phản nhắm đến cổ tay đối phương mà chém đứt.
+                </li>
+                <li>
+                    <b>Hạ cổ tay</b>: chiêu thức sơ cấp đánh vào cổ tay đối phương.
+                </li>
+            </ul>
+            <h5>Cấp bậc</h5>
+            <hr />
+            <p>Phái Kiếm Thần có bảy cấp bậc trình độ: </p>
+            <ol>
+                <li>Kiếm Thần</li>
+                <li>Kiếm Đế</li>
+                <li>Kiếm Vương</li>
+                <li>Kiếm Thánh</li>
+                <li>Kiếm Thần Cao Cấp</li>
+                <li>Kiếm Thần Trung Cấp</li>
+                <li>Kiếm Thần Sơ cấp</li>
+            </ol>
+        </div>
+        <br />
+        <div class="container border shadow-lg p-3 mb-5 bg-body rounded">
+            <h3>Phái Thủy Thần</h3>
+            <p>Thủy Thần kiếm pháp chú trọng phòng ngự và phản công. Đại bản doanh của phái Thủy Thần nằm ở Vương đô Arus thuộc Vương quốc Asura.</p>
+
+            <h5>Tổng Quan</h5>
+            <hr />
+            <p>
+                Đây là môn kiếm pháp chuyên về các kỹ thuật chặn đòn và phản công, tuy không nhiều chiêu thức chủ động tấn công nhưng lại có các chiêu thức khiêu khích đối phương tấn công trước. Những kiếm sĩ Thủy Thần lão luyện có khả năng cảm nhận các luồng ma lực, sử dụng các giác quan để chặn và phản lại bất kỳ đòn tấn công nào, bao gồm cả ma thuật và đòn bắn.
+
+            </p>
+
+            <p>
+                Kiếm pháp Thuỷ Thần có một điểm yếu là kiếm sĩ luôn ở thế phòng thủ, khiến nó trở nên bất lợi trước các chiêu thức khó đoán của kiếm pháp Bắc Thần. Tuy nhiên, kiếm pháp Thuỷ Thần lại là khắc tinh của kiếm pháp Kiếm Thần do đối phương luôn chủ động tấn công trước.
+
+            </p>
+
+            <p>
+                Bởi các kiếm sĩ không di chuyển nhiều nên họ thường mặc trang phục nặng có phòng ngự cao, chẳng hạn giáp toàn thân. Dòng phái kiếm thuật này được phổ biến trong giới hiệp sĩ và quý tộc vì mục tiêu chính của họ là hộ vệ hoặc tự vệ.
+
+            </p>
+            <br />
+            <h5>Chiêu thức</h5>
+            <hr />
+            <ul>
+                <li>
+                    <b>Lưu</b>: chiêu thức phản đòn căn bản của kiếm pháp Thuỷ Thần, là cơ sở của tất cả các chiêu thức còn lại. Người ta nói khi thành thạo, kiếm sĩ có thể đánh phản lại bất kỳ đòn tấn công nào.
+                </li>
+                <li>
+                    <b>Bác Đoạt Kiếm Giới</b>: bí kỹ mạnh nhất, tạo ra bằng cách kết hợp hai chiêu thức khó nhất trong năm bí kỹ, đây còn được xem như bí kỹ thứ sáu của phái Thuỷ Thần. Leyda Lia là người sáng tạo ra và là kiếm sĩ duy nhất sử dụng được bí kỹ này. Bác Đoạt Kiếm Giới khi sử dụng, từ một tư thế cố định có thể vung kiếm bốn phương tám hướng, chỉ cần đối phương trong tầm tấn công di chuyển là có thể chém chết.
+
+                </li>
+                <li>
+                    <b>Quang Phản</b>: bản chất là Quang Thái Đao nhưng đã đổi uy lực lấy tốc độ, đây là chiêu thức duy nhất dùng để khắc chế Quang Thái Đao, đòi hỏi kiếm sĩ có phản xạ cực kỳ cao. Nhắm lúc Quang Thái Đao của đối phương chưa đạt đến tốc độ tối đa, kiếm sĩ sẽ thi triển Quang Phản nhắm đến cổ tay đối phương mà chém đứt.
+                </li>
+
+            </ul>
+            <h5>Cấp bậc</h5>
+            <hr />
+            <p>Phái Kiếm Thần có bảy cấp bậc trình độ: </p>
+            <ol>
+                <li>Thủy Thần</li>
+                <li>Thủy Đế</li>
+                <li>Thủy Vương</li>
+                <li>Thủy Thánh</li>
+                <li>Thủy Thần Cao Cấp</li>
+                <li>Thủy Thần Trung Cấp</li>
+                <li>Thủy Thần Sơ cấp</li>
+            </ol>
+        </div>
+        <br />
+        <div class="container border shadow-lg p-3 mb-5 bg-body rounded">
+            <h3>Phái Bắc Thần</h3>
+            <p>Đây là kiếm pháp không thiên về tấn công hay phòng thủ , đây là một trường phái chiến đầu bằng kiếm . Người dùng có thể linh hoạt trong hoàn cảnh và từng điệu kiện chiến đấu khác nhau.</p>
+
+            <h5>Tổng Quan</h5>
+            <hr />
+            <p>Phong cách chiến đấu cúa Phái Bắc Thần kỹ thuật mà là làm thế nào để sống sót lâu nhất có thể với cơ hội thắng cao nhất. Phụ thuộc nhiều vào khả năng thích ứng với môi trường xung quanh của người dùng.</p>
+
+            <p>Người dùng có thể sáng tạo nhiều loại trong Phái này mà không bị giới hạn . Người học có thể dùng song kiếm , hoặc sử dụng những vũ khí không phải kiếm.</p>
+
+            <p>Do phong cách vào khả năng thích ứng địa hình . Họ được coi là một đối thủ khó khăn với Phái Thủy Thần và ngược lại với Phái Kiếm Thần.</p>
+            <br />
+            <h5>Chiêu thức</h5>
+            <hr />
+            <ul>
+                <li><b>Oboro Juumonji</b>: Đây là chiêu thức đánh lạc hướng của người dùng, Ném thanh kiếm của mình và rút thanh kiếm còn lại để xong tới đối thủ không phòng bị. </li>
+                <li>
+                    <b>Đạn nước mắt</b> : Sử dụng túi bột gia vị cay vào kẻ thù.
+                </li>
+                <li>
+                    <b>Ném Kiếm</b>: Khi một kiếm sĩ Phái Bắc Thần bị dồn vào thế bí , họ sẽ ném kiếm của mình vào đối thủ.
+                </li>
+            </ul>
+            <h5>Cấp bậc</h5>
+            <p>Phái Kiếm Thần có bảy cấp bậc trình độ: </p>
+            <ol>
+                <li>Bắc Thần</li>
+                <li>Bắc Đế</li>
+                <li>Bắc Vương</li>
+                <li>Bắc Thánh</li>
+                <li>Bắc Thần Cao Cấp</li>
+                <li>Bắc Thần Trung Cấp</li>
+                <li>Bắc Thần Sơ cấp</li>
+            </ol>
+        </div>
+    </div>
+    <footer id="footPage">
+
+        <div class="container-fluid bg-dark p-3 ">
+            <div class="row">
+                <div class="col">
+                    <p style="padding-left: 8.2em;">© Cổng thông tin Mushoku Tensei</p>
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col">
+
+                    <p style="padding-left:9.6em;">Liên Hệ: tmk283@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+<script type="text/javascript">
+    //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
+    window.onscroll = function () { scrollFunction() };
+    // khai báo hàm scrollFunction
+    function scrollFunction() {
+        // Kiểm tra vị trí hiện tại của con trỏ so với nội dung trang
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //nếu lớn hơn 20px thì hiện button
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            //nếu nhỏ hơn 20px thì ẩn button
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    //gán sự kiện click cho button
+    document.getElementById('myBtn').addEventListener("click", function () {
+        //Nếu button được click thì nhảy về đầu trang
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+</script>
+</html>

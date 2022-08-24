@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cổng thông tin Mushoku Tensei</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        #navBar, #Carousel_Mid, #main {
+            width: 100%;
+            display: block;
+            padding-bottom: 2em;
+        }
+
+            #navBar img {
+                width: 200px;
+            }
+
+            #Carousel_Mid img {
+                max-height: 540px;
+                max-width: 1296px;
+            }
+
+            #Carousel_Mid p {
+                color: #000000;
+                text-shadow: 2px 2px 8px #FF0000;
+            }
+
+            #Carousel_Mid button {
+                width: 150px;
+            }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        #main img {
+            width: 30%;
+        }
+
+        #main p {
+            font-size: 18px;
+        }
+
+        #main2 img {
+            width: 100%;
+        }
+
+        #main2 p {
+            font-size: 16px;
+        }
+
+        #footPage p {
+            color: #ffffff;
+        }
+
+        #myBtn {
+            display: none; /* Mặc định button sẽ được ẩn*/
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99; /* button được ưu tiên hiển thị đè lên các phần khác*/
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+    </style>
+
+</head>
+<body>
+    <button id="myBtn" title="Go to top" class="btn btn-primary">Top</button>
+    <div id="navBar">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="Index.html"><img src="Images/icon_navBar.webp" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Thế giới
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_lichSu.html">Lịch sử</a></li>
+                                <li><a class="dropdown-item" href="Index_diaLy.html">Địa lý</a></li>
+                                <li><a class="dropdown-item" href="Index_kiemThuat.html">Kiếm Thuật</a></li>
+                                <li><a class="dropdown-item" href="Index_phepThuat.html">Pháp thuật</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nhân vật
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Rudeus.html">Rudeus</a></li>
+                                <li><a class="dropdown-item" href="Index_Syl.html">Sylphiette</a></li>
+                                <li><a class="dropdown-item" href="Index_Roxy.html">Roxy</a></li>
+                                <li><a class="dropdown-item" href="Index_Eris.html">Eris</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Media
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Anime.html">Anime</a></li>
+                                <li><a class="dropdown-item" href="Index_LN.html">Light Novel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div id="main">
+        <div class="container shadow-lg p-3 mb-5 bg-body rounded">
+            <div class="clearfix">
+                <img src="Images/main_Rudeus_h1.webp" class="col-md-6 float-md-end mb-3 ms-md-3 border shadow-lg p-3 mb-5 bg-body rounded" alt="...">
+                <h2>
+                    Rudeus Greyrat
+                </h2>
+                <p>Rudeus Greyrat là nhân vật chính của bộ truyện Thất Nghiệp Chuyển Sinh.</p>
+
+                <p>Kiếp trước cậu là một tên otaku Nhật Bản béo ú 34 tuổi, vô công rồi nghề, xa lánh xã hội. Sau khi bị xe tải tông chết, cậu được tái sinh vào thế giới của kiếm và ma pháp trong thân phận của cậu bé Rudeus Greyrat.</p>
+                <p>Tên: <b>Rudeus Greyrat</b></p>
+                <p>Giới Tính: <b>Nam</b></p>
+                <p>Chủng tộc: <b>Loài người</b></p>
+                <p>Sinh: <b>K407</b></p>
+                <p>Quê Quán: <b>Vương quốc Asura</b></p>
+                <br />
+                <h3>
+                    Ngoại hình
+                </h3>
+                <hr />
+                <p>Rudeus Greyrat có mái tóc màu nâu sáng, mắt xanh lục, khuôn mặt dễ nhìn nhưng khi cười thì rất dâm tà. Cậu có chiều cao trung bình, thân hình không to con nhưng khá rắn chắc. Giống như cha cậu Paul Greyrat, cậu cũng có một nốt ruồi nằm bên dưới mắt trái.</p>
+                <br />
+                <h3>Tính cách</h3>
+                <hr />
+                <p>
+                    Do ảnh hưởng của kiếp trước, cậu thường cố ngăn bản thân kiêu ngạo và mất bình tĩnh. Cậu tỏ ra khiếm tốn và tự ý thức bản thân đến cực độ bởi cậu không muốn trở lại làm con người kiếp trước. Nhiều khi chính sự quá lịch sự và khiêm tốn của cậu lại làm người khác khó chịu.
+
+                </p>
+                <p>
+                    Rudeus là người tốt bụng, luôn muốn giúp đỡ bạn bè và người thân trong gia đình bất cứ khi nào họ cần. Tuy vậy Rudeus lại là người cực kỳ biến thái, đến nỗi trong bất cứ hoàn cảnh nào cũng có thể nảy ra suy nghĩ dâm dục và bệnh hoạn. Nhưng vì thường quan tâm đến người khác nên cậu vẫn được gia đình và bạn bè yêu mến.
+
+                </p>
+                <p>
+                    Mặc dù giỏi ma pháp nhưng Rudeus không có nhiều tự tin khi đối đầu với kẻ địch. Cậu cũng không muốn giết người, đây cũng là ảnh hưởng từ tính cách kiếp trước. Tuy nhiên nếu có ai dám hăm dọa gia đình cậu, Rudeus chẳng ngại tỏ thái độ cứng rắn và quyết liệt.
+
+                </p>
+                <br />
+                <h3>Quá khứ</h3>
+                <hr />
+                <p>
+                    Kiếp trước của Rudeus Greyrat là một gã NEET (không học vấn, không việc làm, không đào tạo) otaku 34 tuổi. Cậu là người con thứ tư trong một gia đình trung lưu có năm anh chị em. Khi còn học tiểu học, cậu là một đứa trẻ sáng dạ, thường được mọi người khen ngợi là thông minh hơn tuổi. Khi lên trung học cơ sở, cậu đã sắm linh kiện bằng tiền tiết kiệm và tự tay lắp ráp một chiếc máy tính để bàn. Nhưng vì quá mải mê với sở thích mà cậu đã bỏ bê việc học hành suốt những năm đó. Do vậy mà cậu chỉ có thể nhập học vào một trường trung học phổ thông ít tiếng. Không lâu sau đó, cậu trở thành nạn nhân của bắt nạt học đường. Trong một lần xếp hàng để mua đồ ăn trưa, cậu đã quát một tên học sinh chen ngang mà không biết rằng hắn ta là một tên lưu manh vô cùng tai tiếng của khóa trên. Cậu đã bị hắn và đồng bọn đánh hội đồng, lột truồng, trói ở cổng trường, chụp ảnh khỏa thân phát tán khắp nơi và đặt cho cậu biệt danh là "chim teo". Cậu đã bỏ học ngay sau sự kiện đó. Tuy gia đình đã nhiều lần động viên cậu đi học lại nhưng cậu đều bỏ ngoài tai. Cậu có một người bạn chơi thân cùng lớp thường xuyên đến nhà để giao bài tập, nhưng cậu đã tức giận đuổi cậu ta đi trong một lần cậu ta lỡ lời chạm vào lòng tự ái của cậu.
+
+                </p>
+                <p>
+                    Cậu tiếp tục sống giam mình trong phòng với chiếc máy tính, xa lánh xã hội, ăn bám gia đình suốt gần 20 năm sau đó. Tuy nhiên chuỗi ngày sống vật vờ của cậu cũng đến hồi kết thúc. Vào năm cậu 34 tuổi, cha mẹ cậu đột ngột qua đời. Cậu đã từ chối tham dự tang lễ của họ, đồng thời gạt bỏ chút lòng thương xót cuối cùng của anh chị em mình, thậm chí cậu còn thản nhiên làm chuyện thất đức trong ngày hôm đó. Không thể chịu được nữa, họ đã ngay lập tức đánh đập và đuổi cậu ra khỏi nhà.
+
+                </p>
+                <p>
+                    Không chốn ở, không một xu dính túi, lại thương tích toàn thân, cậu lang thang vô định trong cơn mưa lạnh buốt. Cảm thấy cuộc đời mình lâm vào ngõ cụt, cậu vừa đi vừa ngẫm lại nguyên do dẫn đến hiện tại, cho đến khi bắt gặp ba học sinh đang cãi nhau ở bên đường. Khi thấy một chiếc xe tải mất lái đang lao đến chỗ họ, cậu dùng hết sức bình sinh để đẩy họ ra. Nhưng rốt cuộc, cậu lại là người phải thế mạng.
+
+                </p>
+                <p>
+                    Khi tỉnh lại, cậu đã được tái sinh vào thế giới của kiếm và ma pháp với ký ức giữ nguyên. Nhận ra được ban tặng cơ hội sống lần thứ hai, cậu thề rằng lần này sẽ sống hết mình để không phải hối tiếc.
+
+                </p>
+                <br />
+                <h3>Thành tựu</h3>
+                <hr />
+                <ul>
+                    <li>
+                        Danh hiệu Thủy Đế Ma Pháp Sư.
+                    </li>
+                    <li>
+                        Đạt thánh cấp các ma pháp hệ hỏa, thổ, phong, trị liệu và giải độc.
+                    </li>
+                    <li>
+                        Có thể sử dụng ma pháp công kích không cần niệm chú.
+                    </li>
+                    <li>
+                        Trở thành thuộc hạ của Long Thần.
+
+                    </li>
+                    <li>
+                        Được Atofe công nhận là anh hùng.
+
+                    </li>
+                    <li>
+                        Hạng 7 trong Thất Đại Liệt Cường.
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <footer id="footPage">
+
+        <div class="container-fluid bg-dark p-3 ">
+            <div class="row">
+                <div class="col">
+                    <p style="padding-left: 8.2em;">© Cổng thông tin Mushoku Tensei</p>
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col">
+
+                    <p style="padding-left:9.6em;">Liên Hệ: tmk283@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+<script type="text/javascript">
+    //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
+    window.onscroll = function () { scrollFunction() };
+    // khai báo hàm scrollFunction
+    function scrollFunction() {
+        // Kiểm tra vị trí hiện tại của con trỏ so với nội dung trang
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //nếu lớn hơn 20px thì hiện button
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            //nếu nhỏ hơn 20px thì ẩn button
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    //gán sự kiện click cho button
+    document.getElementById('myBtn').addEventListener("click", function () {
+        //Nếu button được click thì nhảy về đầu trang
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+</script>
+</html>

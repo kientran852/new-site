@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cổng thông tin Mushoku Tensei</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        #navBar, #Carousel_Mid, #main {
+            width: 100%;
+            display: block;
+            padding-bottom: 2em;
+        }
+
+            #navBar img {
+                width: 200px;
+            }
+
+            #Carousel_Mid img {
+                max-height: 540px;
+                max-width: 1296px;
+            }
+
+            #Carousel_Mid p {
+                color: #000000;
+                text-shadow: 2px 2px 8px #FF0000;
+            }
+
+            #Carousel_Mid button {
+                width: 150px;
+            }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        #main img {
+            width: 30%;
+        }
+
+        #main p {
+            font-size: 18px;
+        }
+
+        #main2 img {
+            width: 100%;
+        }
+
+        #main2 p {
+            font-size: 16px;
+        }
+
+        #footPage p {
+            color: #ffffff;
+        }
+
+        #myBtn {
+            display: none; /* Mặc định button sẽ được ẩn*/
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99; /* button được ưu tiên hiển thị đè lên các phần khác*/
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+    </style>
+
+</head>
+<body>
+    <button id="myBtn" title="Go to top" class="btn btn-primary">Top</button>
+    <div id="navBar">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="Index.html"><img src="Images/icon_navBar.webp" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Thế giới
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_lichSu.html">Lịch sử</a></li>
+                                <li><a class="dropdown-item" href="Index_diaLy.html">Địa lý</a></li>
+                                <li><a class="dropdown-item" href="Index_kiemThuat.html">Kiếm Thuật</a></li>
+                                <li><a class="dropdown-item" href="Index_phepThuat.html">Pháp thuật</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nhân vật
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Rudeus.html">Rudeus</a></li>
+                                <li><a class="dropdown-item" href="Index_Syl.html">Sylphiette</a></li>
+                                <li><a class="dropdown-item" href="Index_Roxy.html">Roxy</a></li>
+                                <li><a class="dropdown-item" href="Index_Eris.html">Eris</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Media
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Anime.html">Anime</a></li>
+                                <li><a class="dropdown-item" href="Index_LN.html">Light Novel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div id="main">
+        <div class="container shadow-lg p-3 mb-5 bg-body rounded">
+            <div class="clearfix">
+                <img src="Images/main_Roxy_h1.webp" class="col-md-6 float-md-end mb-3 ms-md-3 border shadow-lg p-3 mb-5 bg-body rounded" alt="...">
+                <h2>
+                    Roxy Migurdia
+
+
+                </h2>
+                <p>Roxy Migurdia là một pháp sư tài năng. Nhưng bởi vì cô ấy không thể sử dụng thần giao cách cảm để giao tiếp với mọi người trong làng nên cô ấy đã rời làng của mình do cảm thấy mình bị cô lập với những người bạn đồng trang lứa của mình. </p>
+                <p>Cô bắt đầu tham gia hội mạo hiểm giả để đi phiêu lưu cùng với tổ đội của mình. Sau một thời gian không thể sống ổn định với nghề này,cô trở thành gia sư và cuối cùng trở thành giáo viên của Rudeus. Sau sự cố dịch chuyển, Roxy giúp Paul tìm người bị mất tích trong sự kiện này. </p>
+
+
+
+                <p>Tên: <b>Roxy Migurdia</b></p>
+                <p>Giới Tính: <b>Nữ</b></p>
+                <p>Chủng tộc: <b>Ma tộc Migurd</b></p>
+                <p>Sinh: <b>K373</b></p>
+                <p>Quê Quán: <b>Lục địa Ma</b></p>
+                <br />
+                <h3>
+                    Ngoại hình
+                </h3>
+                <hr />
+                <p>Roxy có ngoại hình nhỏ nhắn, chiều cao thấp, nước da trắng và mái tóc dài màu xanh biển buộc thành tóc hai bím. Đôi mắt cùng màu tóc giống lúc nào cũng tỏ ra như là đang buồn ngủ, Trang phục của cô thường bao gồm mũ và áo choàng.</p>
+                <p>Là một người tộc Migurd, cô ấy có thân hình khá giống trẻ con, khiến nhiều người nghĩ cô ấy là thiếu niên hơn là một người lớn.</p>
+                <br />
+                <h3>Tính cách</h3>
+                <hr />
+                <p>
+                    Roxy là một người điềm tĩnh, có cái nhìn sáng suốt về cuộc sống và luôn tìm cách cải thiện bản thân mỗi ngày. Cô ấy rất thông minh, có thể phân tích thông tin và đưa ra những suy luận hợp lý.
+
+                </p>
+                <p>
+                    Trong quá khứ, cô ấy là một người cứng đầu, trốn khỏi bộ tộc của mình để đi lang thang khắp thế giới với tư cách là một nhà mạo hiểm giả. Cô cũng công khai thách thức giáo viên của mình trong Đại học phép thuật Ronoa. Tuy nhiên, nhiều sự cố khác nhau đã xảy ra sau đó và cuộc gặp gỡ của cô với Rudeus đã làm cho cô tự ti về khả năng của mình.
+
+                </p>
+                <p>
+                    Cô ấy có một chút vụng về, khiến cô ấy dễ mắc sai lầm trong tình huống bất ngờ và căng thẳng. Cô cũng hay tự tin về ngoại hình của mình và than thở về nó và có xu hướng khó chịu khi ai đó nhầm cô là một đứa trẻ. Mặc dù tính cách có vẻ hơi phức tạp, cô ấy vẫn có lý tưởng trong chuyện tình cảm như gặp một người đẹp trai trong mê cung cứu mình và tình yêu chớm nở từ đó.
+                </p>
+                <br />
+                <h3>Tiểu sử</h3>
+                <hr />
+                <p>
+                    Roxy được sinh ra từ Bộ tộc Migurd của Ma tộc.Tuy nhiên, cô sinh ra đã không có khả năng giao tiếp thần giao cách cảm đặc biệt của chủng tộc. Trước sự thật không thể chối bỏ cô đã thất vọng về bản thân mình, cô cảm thấy khó chịu với cuộc trò chuyện im lặng của họ và chạy trốn khỏi họ như để thoát khỏi điều đó.
+                </p>
+                <p>
+                    Roxy rời khỏi nhà và tham gia Hội phiêu lưu để kiếm một số tiền nhằm rời Lục địa Ma. Cô trở thành học sinh của Đại học Phép thuật Ranoa và trở thành Thủy Thánh Ma Pháp Sư sau khi tốt nghiệp. Sau đó cô được Paul và Zenith thuê để dạy Rudeus về phép thuật trong hai năm.
+
+                </p>
+
+                <br />
+                <h3>Thành tựu</h3>
+                <hr />
+                <ul>
+                    <li>
+                        Rút gọn thần chú ma pháp
+                    </li>
+                    <li>
+                        Ma Thuật Sư Cấp Thủy Vương.
+
+                    </li>
+                    <li>
+                        Giáo viên tại Đại học Phép thuật Ranoa
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <footer id="footPage">
+
+        <div class="container-fluid bg-dark p-3 ">
+            <div class="row">
+                <div class="col">
+                    <p style="padding-left: 8.2em;">© Cổng thông tin Mushoku Tensei</p>
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col">
+
+                    <p style="padding-left:9.6em;">Liên Hệ: tmk283@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+<script type="text/javascript">
+    //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
+    window.onscroll = function () { scrollFunction() };
+    // khai báo hàm scrollFunction
+    function scrollFunction() {
+        // Kiểm tra vị trí hiện tại của con trỏ so với nội dung trang
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //nếu lớn hơn 20px thì hiện button
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            //nếu nhỏ hơn 20px thì ẩn button
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    //gán sự kiện click cho button
+    document.getElementById('myBtn').addEventListener("click", function () {
+        //Nếu button được click thì nhảy về đầu trang
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+</script>
+</html>

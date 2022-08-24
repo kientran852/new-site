@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cổng thông tin Mushoku Tensei</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        #navBar, #Carousel_Mid, #main {
+            width: 100%;
+            display: block;
+            padding-bottom: 2em;
+        }
+
+            #navBar img {
+                width: 200px;
+            }
+
+            #Carousel_Mid img {
+                max-height: 540px;
+                max-width: 1296px;
+            }
+
+            #Carousel_Mid p {
+                color: #000000;
+                text-shadow: 2px 2px 8px #FF0000;
+            }
+
+            #Carousel_Mid button {
+                width: 150px;
+            }
+
+        a {
+            text-decoration: none;
+        }
+
+        #main img {
+            width: 100%;
+        }
+
+        #main p {
+            font-size: 16px;
+        }
+
+        #main img {
+            width: 100%;
+            height: 800px;
+        }
+
+        #main2 p {
+            font-size: 16px;
+        }
+
+        #footPage p {
+            color: #ffffff;
+        }
+
+        #main ul {
+            padding: 30px;
+        }
+
+        .col-6 {
+            padding: 12px;
+        }
+
+        #myBtn {
+            display: none; /* Mặc định button sẽ được ẩn*/
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99; /* button được ưu tiên hiển thị đè lên các phần khác*/
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+    </style>
+
+</head>
+<body>
+    <button id="myBtn" title="Go to top" class="btn btn-primary">Top</button>
+    <div id="navBar">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="Index.html"><img src="Images/icon_navBar.webp" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Thế giới
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_lichSu.html">Lịch sử</a></li>
+                                <li><a class="dropdown-item" href="Index_diaLy.html">Địa lý</a></li>
+                                <li><a class="dropdown-item" href="Index_kiemThuat.html">Kiếm Thuật</a></li>
+                                <li><a class="dropdown-item" href="Index_phepThuat.html">Pháp thuật</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nhân vật
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Rudeus.html">Rudeus</a></li>
+                                <li><a class="dropdown-item" href="Index_Syl.html">Sylphiette</a></li>
+                                <li><a class="dropdown-item" href="Index_Roxy.html">Roxy</a></li>
+                                <li><a class="dropdown-item" href="Index_Eris.html">Eris</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Media
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Anime.html">Anime</a></li>
+                                <li><a class="dropdown-item" href="Index_LN.html">Light Novel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div id="main">
+        <div class="container shadow-lg p-3 mb-5 bg-body rounded">
+            <h2 class="text-center">Bản đồ thế giới Mushoku Tensei</h2>
+            <img src="Images/main_DL_h1.webp" />
+            <hr />
+            <div class="row bgXam border">
+                <div class="col-6">
+                    <img src="Images/main_DL_h2.webp" />
+                </div>
+                <div class="col-6">
+                    <h3>Lục địa Trung Tâm</h3>
+                    <p>Lục địa Trung Tâm nằm ở phía tây của Biển Nhẫn, đây là lục địa lớn nhất thế giới. Phía đông bắc tiếp giáp Lục địa Thiên, phía tây nam tiếp giáp Lục địa Begaritt, phía đông nam tiếp giáp Lục địa Millis. Dãy núi Xích Long chia lục địa làm ba phần: miền bắc, miền tây và miền nam. Dân cư sinh sống tại lục địa Trung Tâm chủ yếu là loài người. Tiếng loài người là ngôn ngữ chủ đạo.</p>
+                    <hr />
+                    <h5>Miền Bắc</h5>
+                    <ul>
+                        <li>Vương quốc Ranoa: Một trong ba Đại quốc Ma pháp bên cạnh công quốc Neris và công quốc Basherant. Ranoa Là quốc gia tự trị có lãnh thổ lớn nhất phía bắc. Tại Thành phố Ma pháp Sharia – vương đô của Ranoa – có Đại học Ma pháp Ranoa nổi tiếng, nơi sản sinh ra nhiều pháp sư tài ba.</li>
+                        <li>
+                            Công quốc Neris: Một trong ba Đại quốc Ma pháp. Nổi tiếng trong việc chế tạo công cụ ma pháp.
+                        </li>
+                        <li>
+                            Công quốc Basherant: Một trong ba Đại quốc Ma pháp. Nổi tiếng trong việc nghiên cứu ma pháp.
+                        </li>
+                    </ul>
+                    <h5>Miền Tây</h5>
+                    <ul>
+                        <li>Vương quốc Asura: nằm ở phía tây lục địa Trung Tâm là quốc gia thịnh vượng và giàu có nhất thế giới. Vương đô Arus – được đặt theo tên của vị anh hùng loài người – là thành phố lớn và đông dân nhất thế giới. Nguồn tài nguyên thiên nhiên dồi dào và số lượng quái vật sinh sống ít đã biến Vương quốc Asura thành nơi sinh sống lý tưởng của con người. Dẫu vậy, Asura không phải là nơi thích hợp cho các mạo hiểm giả kiếm sống, bởi vương quốc sẽ thường xuyên điều động hiệp sĩ đi tiêu diệt quái vật gần thị trấn và thôn làng. Do đó Hội Mạo Hiểm không có nhiều yêu cầu tương tự.</li>
+                    </ul>
+                    <h5>
+                        Miền Nam
+                    </h5>
+                    <ul>
+                        <li>Vương quốc Vương Long: quốc gia có lãnh thổ lớn thứ ba thế giới và có lớn nhất miền nam lục địa Trung Tâm với bốn nước chư hầu.</li>
+                        <li>
+                            Vương quốc Shirone: một quốc gia tuy nhỏ nhưng có lịch sử lâu đời. Thủ đô của Shirone là Latakia.
+                        </li>
+                        <li>
+                            Vương quốc Sanakia: một trong ba nước chư hầu của Vương quốc Vương Long.
+                        </li>
+                        <li>
+                            Vương quốc Kikka: một trong ba nước chư hầu của Vương quốc Vương Long.
+                        </li>
+                        <li>
+                            Vùng tranh chấp: nằm ở phía bắc của miền Nam, tập hợp nhiều quốc gia nhỏ.
+                        </li>
+                    </ul>
+
+                </div>
+                <hr />
+
+                <div class="col-6">
+                    <h3>Lục địa Millis</h3>
+                    <p>
+                        Lục địa Millis nằm ở phía đông nam của Biển Nhẫn. Phía tây tiếp giáp cực nam Lục địa Trung Tâm, phía bắc tiếp giáp cực nam Lục địa Ma. Dãy núi Thanh Long chia lục địa Millis làm hai miền, Đại Sâm Lâm ở phía bắc, Thánh quốc Millis ở phía nam. Xuyên qua lục địa là xa lộ Thánh Kiếm.
+
+                        Loài người sinh sống chủ yếu ở các đồng bằng miền nam lục địa. Các loài thú tộc, elf, dwaft và hobbit sinh sống trong Đại Sâm Lâm ở phía bắc lục địa. Dân số loài người và thú tộc xấp xỉ nhau.
+
+                        Ngôn ngữ được sử dụng tại lục địa Millis là tiếng loài người và tiếng Thú Thần.
+                    </p>
+                    <hr />
+                    <h5>Thánh quốc Millis</h5>
+                    <ul>
+
+                        <li>Thánh quốc Millis là quốc gia mạnh thứ hai thế giới, chỉ sau Vương quốc Asura. Đây là thánh địa của Giáo phái Millis, tôn giáo lớn nhất thế giới. Đây cũng là nơi đặt trụ sở chính của Hội Mạo Hiểm. Ma tộc ở đây bị kỳ thị nặng nề.</li>
+                        <li>
+                            Millishion, vương đô của Thánh quốc Millis được mệnh danh là thành phố đẹp nhất thế giới.
+                        </li>
+
+                    </ul>
+                    <h5>
+                        Đại Sâm Lâm
+                    </h5>
+                    <ul>
+                        <li>Đại Sâm Lâm là một khu rừng rậm chiếm hầu hết miền bắc lục địa. Đây là chốn cư ngụ của vô số giống loài động vật và nhiều chủng tộc khác nhau. Thú tộc sống tại phía bắc, dwarf phía nam, hobbit phía tây và elf phía đông.</li>
+                        <li>
+                            Mùa mưa hằng năm tại đây kéo dài ba tháng khiến cả khu rừng bị lụt, giao thông phong tỏa.
+                        </li>
+                    </ul>
+                    <h5>
+                        Xa lộ Thánh Kiếm
+                    </h5>
+                    <p>
+                        Một con đường xuyên lục địa được cho là do đường kiếm của Thánh Millis tạo ra. Xa lộ kéo dài từ cảng Tây, cắt ngang dãy núi Thanh Long, chia đôi Đại Sâm Lâm và kết thúc tại cảng Zant ở cực bắc lục địa. Thánh lực Millis vẫn còn vương lại trên con đường, nên cho dù Đại Sâm Lâm ngập nặng trong mùa mưa thì con đường vẫn hoàn toàn khô ráo. Không có quái vật nào dám đặt chân lên xa lộ.
+
+                    </p>
+                    <h5>Càng Tây</h5>
+                    <p>
+                        Hải cảng nằm ở cực tây của lục địa. Tuyến hàng hải kết nối cảng Đông của Lục địa Trung Tâm.
+
+                    </p>
+                    <h5>
+                        Cảng Zant
+                    </h5>
+                    <p>
+                        Hải cảng nằm ở cực bắc của lục địa. Tuyến hàng hải kết nối cảng Wind của Lục địa Ma.
+
+                    </p>
+                </div>
+
+                <div class="col-6">
+                    <img src="Images/main_DL_h3.webp" />
+                </div>
+                <hr />
+                <div class="col-6">
+                    <img src="Images/main_DL_h4.webp" />
+                </div>
+                <div class="col-6">
+                    <h3>Lục địa Ma</h3>
+                    <p>Lục địa Ma là đại lục địa ở phía đông bắc của Biển Nhẫn, phía tây bắc lục địa Ma giáp cực đông Lục địa Thiên, phía nam giáp cực bắc Lục địa Millis. Toàn bộ đại lục địa là một vùng đất cằn cỗi có nồng độ ma lực cao, địa hình trập trùng và hiểm trở với những mỏm đá và phiến đá khổng lồ lô nhô trên mặt đất, tựa như mê cung tự nhiên. Đường xá và lối đi không tồn tại.</p>
+                    <p>
+                        Hầu hết dân cư tại lục địa Ma là Ma tộc. Các chủng tộc khác như loài người, thú tộc, hải tộc thường qua lại tại các thị trấn cảng. Ngôn ngữ sử dụng tại lục địa Ma là tiếng Ma Thần.
+
+                    </p>
+                    <hr />
+                    <h5>
+                        Vùng Biegoya
+                    </h5>
+                    <p>
+                        Vùng đất do ma vương Badigadi cai trị.
+
+                    </p>
+                    <ul>
+                        <li>
+                            Thị trấn Rikarisu: còn được gọi là cựu thành trì Kishirisu, thị trấn nằm trong một cái hố khổng lồ trông như miệng núi lửa. Rikarisu là một trong ba khu dân cư lớn nhất lục địa. Nơi đây là trụ sở quân đội của Ma Giới Đại Đế Kishirika Kishirisu trong các cuộc đại chiến Nhân–Ma hàng ngàn năm trước.
+                        </li>
+
+                    </ul>
+
+                </div>
+                <hr />
+                <div class="col-6">
+                    <h3>Lục địa Begaritt</h3>
+                    <p>
+                        Lục địa Begaritt là một lục địa ở phía Tây Nam có rất nhiều mê cung nguy hiểm, tập trung nhiều mana. Do môi trường khắc nghiệt và số lượng quái vật sinh ra nên lục địa này nên được cho là nguy hiểm thứ hai thế giới sau Lục địa Ma.
+                    </p>
+                    <hr />
+                    <h5>
+                        Thành phố mê cung Rapan
+                    </h5>
+                    <p>Thành phố nổi tiếng nhất của Lục địa Bergraritt được xây trong xương của quái vật khổng lồ Behemoth, các tòa nhà chủ yếu được làm bằng đất và vật liệu quái vật</p>
+                    <h5>Mê cung dịch chuyển</h5>
+                    <p>Một mê cung hạng S , nằm trong một hang động gần thành phố Rapan</p>
+                    <h5>Cảng biển </h5>
+                    <p>Lục địa có 2 cảng , một cái nằm ở Phía Tây thông với Lục địa Trung Tâm trong vương quốc Asura , và cảng kia được thông với Phía Nam của Lục địa Trung Tâm trong vương quốc Vương Long</p>
+
+                </div>
+
+                <div class="col-6">
+                    <img src="Images/main_DL_h5.png" />
+                </div>
+                <hr />
+                <div class="col-6">
+                    <img src="Images/main_DL_h6.png" />
+                </div>
+
+                <div class="col-6">
+                    <h3>Lục Địa Thiên</h3>
+                    <p>Lục Địa Thiên là một lục địa nhỏ nằm ở phía Bắc nối với Lục Địa Trung Tâm . Là nơi cho chủng tộc Thiên sinh sống</p>
+
+                    <hr />
+                    <h5>
+                        Hell
+
+                    </h5>
+                    <p>
+                        Một trong ba mê cung vĩ đại nhất trên thế giới . Đây là nơi Vua Vita lẫn tránh Laxus
+
+                    </p>
+                    <h5>
+                        Artier
+                    </h5>
+                    <p>Một thị trấn của Thiên Tộc được bảo vệ bởi kết giới . Long Vương Perugius có quen một vài người dân trong thị trấn ở đây</p>
+                </div>
+                <hr />
+                <div class="col-6">
+                    <h3>Biển Nhẫn </h3>
+                    <p>
+                        Biển Nhẫn là biển lớn bao quanh bởi 4 đại lục địa: Lục địa Trung Tâm ở phía tây, Lục địa Ma ở phía đông bắc, Lục địa Millis ở phía đông nam và Lục địa Thiên ở phía bắc. Biển Nhẫn xuất hiện vào cuối đại chiến Nhân–Ma lần thứ hai, khi Siêu Lục Địa bị chia làm hai, hình thành Lục địa Trung Tâm và Lục địa Ma.
+
+                    </p>
+                    <p>
+                        Biển Nhẫn là nơi sinh sống của hải tộc. Cư dân dưới biển nói ngôn ngữ Hải Thần.
+
+                    </p>
+                </div>
+                <div class="col-6">
+                    <img src="Images/main_DL_h7.webp" />
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <footer id="footPage">
+
+        <div class="container-fluid bg-dark p-3 ">
+            <div class="row">
+                <div class="col">
+                    <p style="padding-left: 8.2em;">© Cổng thông tin Mushoku Tensei</p>
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col">
+
+                    <p style="padding-left:9.6em;">Liên Hệ: tmk283@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+<script type="text/javascript">
+    //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
+    window.onscroll = function () { scrollFunction() };
+    // khai báo hàm scrollFunction
+    function scrollFunction() {
+        // Kiểm tra vị trí hiện tại của con trỏ so với nội dung trang
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //nếu lớn hơn 20px thì hiện button
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            //nếu nhỏ hơn 20px thì ẩn button
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    //gán sự kiện click cho button
+    document.getElementById('myBtn').addEventListener("click", function () {
+        //Nếu button được click thì nhảy về đầu trang
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+</script>
+</html>

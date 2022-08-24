@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cổng thông tin Mushoku Tensei</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        #navBar, #Carousel_Mid, #main {
+            width: 100%;
+            display: block;
+            padding-bottom: 2em;
+        }
+
+            #navBar img {
+                width: 200px;
+            }
+
+            #Carousel_Mid img {
+                max-height: 540px;
+                max-width: 1296px;
+            }
+
+            #Carousel_Mid p {
+                color: #000000;
+                text-shadow: 2px 2px 8px #FF0000;
+            }
+
+            #Carousel_Mid button {
+                width: 150px;
+            }
+
+        a {
+            text-decoration: none;
+        }
+
+        #main img {
+            width: 80%;
+        }
+
+        #main p {
+            font-size: 20px;
+        }
+
+        #main2 img {
+            width: 100%;
+        }
+
+        #main2 p {
+            font-size: 16px;
+        }
+
+        #footPage p {
+            color: #ffffff;
+        }
+
+        #main ul {
+            padding: 30px;
+        }
+
+        #myBtn {
+            display: none; /* Mặc định button sẽ được ẩn*/
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99; /* button được ưu tiên hiển thị đè lên các phần khác*/
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+    </style>
+
+</head>
+<body>
+    <button id="myBtn" title="Go to top" class="btn btn-primary">Top</button>
+    <div id="navBar">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="Index.html"><img src="Images/icon_navBar.webp" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Thế giới
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_lichSu.html">Lịch sử</a></li>
+                                <li><a class="dropdown-item" href="Index_diaLy.html">Địa lý</a></li>
+                                <li><a class="dropdown-item" href="Index_kiemThuat.html">Kiếm Thuật</a></li>
+                                <li><a class="dropdown-item" href="Index_phepThuat.html">Pháp thuật</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nhân vật
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Rudeus.html">Rudeus</a></li>
+                                <li><a class="dropdown-item" href="Index_Syl.html">Sylphiette</a></li>
+                                <li><a class="dropdown-item" href="Index_Roxy.html">Roxy</a></li>
+                                <li><a class="dropdown-item" href="Index_Eris.html">Eris</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Media
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Anime.html">Anime</a></li>
+                                <li><a class="dropdown-item" href="Index_LN.html">Light Novel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div id="main">
+        <div class="container shadow-lg p-3 mb-5 bg-body rounded">
+            <h1>Mốc thời gian</h1>
+            <hr />
+            <h3>
+                Hơn 100.000 năm trước.
+                <br />
+                Thời đại của các vị thần cổ xưa.
+            </h3>
+            <ul>
+                <li>Thế giới này được liên kết bởi sáu thế giới khác nhau, được mô tả giống như sáu mặt của xúc xắc, bao gồm: Nhân Giới, Long Giới, Ma Giới, Thú Giới, Thiên Giới, Hải Giới.</li>
+                <li>
+                    Còn một thế giới nằm tại trung tâm của thế giới sáu mặt đó, được gọi là Vô Giới.
+                </li>
+                <li>
+                    Mỗi thế giới có một vị thần tương ứng cai quản: Nhân Thần, Long Thần, Ma Thần, Thú Thần, Thiên Thần, Hải Thần, Vô Thần. Sử sách gọi họ là Bảy vị thần cổ xưa.
+                </li>
+                <li>
+                    Giữa các thế giới có kết giới (lớp rào chắn vô hình) ngăn cách, chỉ thần linh hoặc những kẻ mạnh vô biên mới có thể vượt qua.
+
+                </li>
+            </ul>
+            <hr />
+            <h3>
+                20.000 năm trước
+                <br />
+                Sự sụp đổ của năm thế giới
+            </h3>
+            <ul>
+                <li>
+                    Ở Long Giới xuất hiện một ác long thần, lãnh đạo năm thuộc hạ là Ngũ Long Tướng (gồm một long đế và bốn long vương) phá kết giới và hủy diệt bốn thế giới khác. Cư dân từ các thế giới đó phải trốn đến thế giới loài người.
+                </li>
+                <li>
+                    Cuối cuộc chiến, long đế cùng bốn long vương còn lại đã phản bội Long Thần. Sau trận chiến khốc liệt, Long Giới cũng đã bị hủy diệt.
+
+                </li>
+
+            </ul>
+            <hr />
+            <h3>
+                10.000 năm trước
+                <br />
+                Thời đại hỗn nguyên
+            </h3>
+            <ul>
+                <li>
+                    Tại thế giới loài người liên tiếp xảy ra chiến tranh giữa loài người và các công dân từ thế giới khác.
+                </li>
+                <li>
+                    Sau một thời gian dài, các chủng tộc bắt đầu sinh sống riêng biệt: thú tộc sống trong rừng, hải tộc cai trị biển cả, thiên tộc kiểm soát những cao nguyên, long tộc gần như tuyệt diệt nên phải ở ẩn, vô tộc có thể sống ở bất cứ đâu. Chỉ riêng loài người và ma tộc vẫn tranh giành các vùng đồng bằng. Khi đó Lục địa Trung Tâm và Lục địa Ma vẫn là một dải đất liền nhau, gọi là Siêu Lục Địa.
+
+                </li>
+
+            </ul>
+            <hr />
+            <h3>
+                7.000 năm trước
+                <br />
+                Đại chiến Nhân–Ma lần thứ nhất bắt đầu
+
+            </h3>
+            <ul>
+                <li>
+                    Dân số tăng lên cùng với sự tiến bộ của phép thuật và võ thuật. Xung đột giữa loài người và ma tộc tăng cao.
+                </li>
+                <li>
+                    Đại chiến thế giới bùng nổ, lôi kéo sự tham gia của các chủng tộc khác.
+
+                </li>
+            </ul>
+            <hr />
+            <h3>
+                6.000 năm trước
+                <br />
+                Đại chiến Nhân–Ma lần thứ nhất kết thúc
+
+            </h3>
+            <ul>
+                <li>
+                    Chiến tranh liên miên và khốc liệt suốt 1000 năm.
+                </li>
+                <li>
+                    Cuối cuộc đại chiến, Anh hùng Arus của loài người cùng sáu người đồng đội đã hợp sức tiêu diệt Ngũ Đại Ma Vương và Ma Giới Đại Đế Kishirika, kết thúc đại chiến.
+
+                </li>
+            </ul>
+            <hr />
+            <h3>
+                5.500 năm trước
+                <br />
+                Loài người trên đà chiến thắng, không ngừng gây chiến với các chủng tộc khác suốt 500 năm. Ma tộc thời đó bị xem như nô lệ.
+
+            </h3>
+            <ul>
+                <li>Thế giới này được liên kết bởi sáu thế giới khác nhau, được mô tả giống như sáu mặt của xúc xắc, bao gồm: Nhân Giới, Long Giới, Ma Giới, Thú Giới, Thiên Giới, Hải Giới.</li>
+                <li>
+                    Còn một thế giới nằm tại trung tâm của thế giới sáu mặt đó, được gọi là Vô Giới.
+                </li>
+            </ul>
+            <hr />
+            <h3>
+                5000 năm trước
+                <br />
+                Đại chiến Nhân–Ma lần thứ hai bắt đầu
+
+            </h3>
+            <ul>
+                <li>
+                    Kishirika tái sinh, ôm mộng phục thù loài người, châm ngòi đại chiến Nhân–Ma lần thứ hai.
+                </li>
+                <li>
+                    Cuộc chiến kéo dài 800 năm, ma tộc do Kishirika lãnh đạo lập liên minh với thú tộc và hải tộc, dần dần dồn loài người chân tường.
+
+                </li>
+
+            </ul>
+            <hr />
+            <h3>
+                4200 năm trước
+                <br />
+                Đại chiến Nhân–Ma lần thứ hai kết thúc
+
+            </h3>
+            <ul>
+                <li>
+                    Hiệp sĩ Hoàng kim Aldebaran của loài người xuất hiện, đảo ngược cục diện chiến tranh. Cuối cuộc chiến, Aldebaran tung một đòn kết liễu Ma Giới Đại Đế Kishirika, tạo ra một cái hố lớn chia tách Siêu Lục Địa, hình thành Lục địa Trung Tâm, Lục địa Ma và Biển Nhẫn.
+                </li>
+            </ul>
+            <hr />
+            <h3>
+                4200-1000 năm trước
+                <br />
+                Thời kỳ bình yên
+
+            </h3>
+            <ul>
+                <li>
+                    Loài người thi hành các kế sách ngoại giao nhằm đẩy toàn bộ ma tộc đến lục địa Ma, sau đó phong toả các hải cảng.
+                </li>
+                <li>
+                    Ma tộc bị giam hãm tại lục địa Ma, một nơi cằn cỗi, nhiều quái vật mạnh, dẫn đến các cuộc nội chiến tranh giành tài nguyên. Dân số ma tộc giảm mạnh.
+
+                </li>
+
+            </ul>
+            <hr />
+            <h3>
+                1000 năm trước
+                <br />
+
+
+            </h3>
+            <ul>
+                <li>
+                    Ma Thần Laplace xuất hiện, thống nhất các loài ma tộc và chinh phục lục địa Ma.
+                </li>
+
+            </ul>
+            <hr />
+            <h3>
+                500 năm trước
+                <br />
+                Đại chiến Nhân–Ma lần thứ ba bắt đầu
+
+            </h3>
+            <ul>
+                <li>
+                    Laplace phát động chiến tranh. Bằng cách thuyết phục hải tộc và thú tộc về phe mình, Laplace đã nhanh chóng khống chế miền bắc và miền nam Lục địa Trung Tâm. Từ hai phía, quân đội ma tộc tổng tiến công vào miền tây, đẩy Vương quốc Asura vào chân tường.
+                </li>
+
+            </ul>
+            <hr />
+            <h3>
+                400 năm trước
+                <br />
+                Đại chiến Nhân–Ma lần thứ ba kết thúc
+
+            </h3>
+            <ul>
+                <li>
+                    Bảy dũng sĩ của Vương quốc Asura thuyết phục hải tộc dỡ bỏ phong toả đường biển, đồng thời liên minh với thú tộc.
+                </li>
+                <li>
+                    Vương quốc Asura bắt tay với Đoàn Hiệp sĩ Thánh Millis, với sự hợp lực của thú tộc đã mở một cuộc tổng tiến công vào đại bản doanh của Laplace. Sau trận chiến, Laplace đã thua cuộc và bị phong ấn.
+
+                </li>
+                <li>
+                    Cuộc chiến kết thúc đánh dấu năm đầu tiên của Long Giáp Lịch – loại lịch mới được đặt theo biệt hiệu của một trong ba đại anh hùng diệt Ma Thần Laplace.
+
+                </li>
+            </ul>
+            <hr />
+            <h3>
+                Thời điểm hiện tại
+                <br />
+                Thời kỳ bình yên
+
+            </h3>
+            <ul>
+                <li>
+                    Các phe đều kiệt quệ sau cuộc đại chiến, loài người lập thoả thuận với ma tộc, dần dỡ bỏ phong toả các hải cảng. Ma tộc hiện có thể tự do đi lại và sinh sống trên khắp các lục địa.
+                </li>
+                <li>
+                    Mặc dù xu hướng kỳ thị ma tộc vẫn tồn tại dai dẳng ở lãnh thổ loài người, nhưng nhìn chung thế giới khá yên bình.
+
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+    <footer id="footPage">
+
+        <div class="container-fluid bg-dark p-3 ">
+            <div class="row">
+                <div class="col">
+                    <p style="padding-left: 8.2em;">© Cổng thông tin Mushoku Tensei</p>
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col">
+
+                    <p style="padding-left:9.6em;">Liên Hệ: tmk283@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+<script type="text/javascript">
+    //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
+    window.onscroll = function () { scrollFunction() };
+    // khai báo hàm scrollFunction
+    function scrollFunction() {
+        // Kiểm tra vị trí hiện tại của con trỏ so với nội dung trang
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //nếu lớn hơn 20px thì hiện button
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            //nếu nhỏ hơn 20px thì ẩn button
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    //gán sự kiện click cho button
+    document.getElementById('myBtn').addEventListener("click", function () {
+        //Nếu button được click thì nhảy về đầu trang
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+</script>
+</html>

@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cổng thông tin Mushoku Tensei</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+            
+        }
+        #navBar, #Carousel_Mid, #main {
+            width: 100%;
+            display: block;
+            padding-bottom: 2em;
+        }
+
+            #navBar img {
+                width: 200px;
+            }
+
+            #Carousel_Mid img {
+                max-height: 540px;
+                max-width: 1296px;
+            }
+
+            #Carousel_Mid p {
+                color: #000000;
+                text-shadow: 2px 2px 8px #FF0000;
+            }
+
+            #Carousel_Mid button {
+                width: 150px;
+            }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        #main img {
+            width: 30%;
+        }
+
+        #main p {
+            font-size: 18px;
+        }
+
+        #main2 img {
+            width: 100%;
+        }
+
+        #main2 p {
+            font-size: 16px;
+        }
+
+        #footPage p {
+            color: #ffffff;
+        }
+
+        #myBtn {
+            display: none; /* Mặc định button sẽ được ẩn*/
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99; /* button được ưu tiên hiển thị đè lên các phần khác*/
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+    </style>
+
+</head>
+<body>
+    <button id="myBtn" title="Go to top" class="btn btn-primary">Top</button>
+    <div id="navBar">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="Index.html"><img src="Images/icon_navBar.webp" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Thế giới
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_lichSu.html">Lịch sử</a></li>
+                                <li><a class="dropdown-item" href="Index_diaLy.html">Địa lý</a></li>
+                                <li><a class="dropdown-item" href="Index_kiemThuat.html">Kiếm Thuật</a></li>
+                                <li><a class="dropdown-item" href="Index_phepThuat.html">Pháp thuật</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nhân vật
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Rudeus.html">Rudeus</a></li>
+                                <li><a class="dropdown-item" href="Index_Syl.html">Sylphiette</a></li>
+                                <li><a class="dropdown-item" href="Index_Roxy.html">Roxy</a></li>
+                                <li><a class="dropdown-item" href="Index_Eris.html">Eris</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Media
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Anime.html">Anime</a></li>
+                                <li><a class="dropdown-item" href="Index_LN.html">Light Novel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div id="main">
+        <div class="container shadow-lg p-3 mb-5 bg-body rounded">
+            <div class="clearfix">
+                <img src="Images/main_Anime_h1.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 border shadow-lg p-3 mb-5 bg-body rounded" alt="...">
+                <h2>
+                    Anime
+                </h2>
+                <p>
+                    Thất Nghiệp Chuyển Sinh là anime chuyển thể từ bộ light novel giả tưởng của tác giả Rifujin na Magonote, do họa sĩ Shirotaka vẽ minh họa.
+                </p>
+
+                <p>
+                    Phiên bản anime được sản xuất bởi Studio Bind, dưới sự quản lý của Egg Firm. Công việc đạo diễn series và viết kịch bản đều do đạo diễn Manabu Okamoto đảm nhiệm. Ban đầu bộ anime được dự kiến phát hành từ tháng 10 năm 2020, nhưng sau đó đã hoãn lại đến tháng 1 năm 2021 mới chính thức lên sóng.
+
+                </p>
+                <p>
+                    Mùa đầu tiên của bộ phim sẽ có tổng cộng 23 tập, được chia làm 2 phần. Phần đầu tiên gồm 11 tập phim bắt đầu phát sóng chính thức từ ngày 11 tháng 1 năm 2021 đến ngày 22 tháng 3 năm 2021 theo giờ Nhật Bản. Ngày phát sóng phần thứ 2 gồm 12 tập hoãn từ tháng 7 đến ngày 3 tháng 10 năm 2021. Bộ phim cũng được phát hành dưới dạng blu-ray với 4 volume. Volume đầu tiên dự kiến phát hành vào ngày 21 tháng 4 năm 2021.
+
+                </p>
+                <p>
+                    Bộ anime được nhiều quốc gia trên thế giới mua bản quyền để phát sóng song song với Nhật Bản. Gồm có Bắc Mỹ, Nam Mỹ, châu Âu, các quốc gia Đông Á, Úc, New Zealand v.v. Phiên bản lồng tiếng Anh do Funimation thực hiện bắt đầu đến với khán giả Bắc Mỹ và Nam Á từ ngày 13 tháng 2 năm 2021. Tại Việt Nam vầ khu vực Đông Nam Á, Thất Nghiệp Chuyển Sinh được Muse Communications mua bản quyền phát hành miễn phí trên nền tảng video trực tuyến Youtube và iQiyi.
+
+                </p>
+                <p>
+                    Season 2 của anime dự kiến phát sóng vào năm 2023.
+
+                </p>
+
+                <h3>
+                    Giới Thiệu
+                </h3>
+                <hr />
+                <p>
+                    "Tôi sẽ nghiêm túc ở cái dị giới này!"
+
+                </p>
+                <p>
+                    Có một người đàn ông 34 tuổi vẫn là giai tân, thất nghiệp, một NEET chính hiệu. Vào đúng ngày tang lễ của cha mẹ mình, anh bị họ hàng đuổi ra khỏi nhà, rồi bị xe tải tông chết mà qua đời. Khi tỉnh lại, anh nhận ra mình đã đầu thai vào một đứa bé ở một thế giới xa lạ với kiếm và ma pháp! Từng sống như một kẻ cặn bã của xã hội, nay anh quyết tâm làm lại cuộc đời dưới dưới cái tên Rudeus! Đón đợi anh là một cô nàng ma thuật sĩ bé nhỏ, một cô bé xinh đẹp mang đôi tai Elf, một tiểu thư Tsundere hung dữ và biết bao nhân vật khác... Hành trình cùng những cuộc chiến khốc liệt bắt đầu. "Câu chuyện kỳ ảo về hành trình làm lại cuộc đời bắt đầu!"
+                </p>
+                <br />
+                <h3>Đội ngũ sản xuất chính</h3>
+                <hr />
+                <p>Đạo diễn, kịch bản: <b>Okamoto Manabu</b></p>
+                <p>Trợ lý đạo diễn: <b>Hirano Hiroki</b></p>
+                <p>Bảng phân cảnh: <b>Okamoto Manabu, Hirano Hiroki</b></p>
+                <p>Thiết kế nhân vật: <b>Sugiyama Kazutaka</b></p>
+                <p>Thiết kế nhân vật phụ:<b>Saitou Yochiko</b></p>
+                <p>Trưởng đạo diễn hoạt hoạ: <b>Sugiyama Kazutaka, Saitou Yochiko</b></p>
+                <p>Đạo diễn hình ảnh: <b>Miyake Masakazu</b></p>
+                <p>Thiết kế màu sắc: <b>Doi Makiko</b></p>
+                <p>Đạo diễn máy quay:  <b>Tonsho Shinji</b></p>
+                <p>Hậu kỳ:  <b>Mishima Akinori</b></p>
+                <p>Đạo diễn âm thanh: <b>Aketagawa Jin</b></p>
+                <p>Hiệu ứng âm thanh:  <b>Tsutomu Ueno</b></p>
+                <p>Nhạc nền: <b>Fujisawa Yoshiaki</b></p>
+                <p>Bài hát chủ đề:<b>Ohara Yuiko</b></p>
+                <br />
+                <h3>Trailer phim</h3>
+                <hr />
+                <div class="row">
+                    <div class="col-4">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Qx01pn9l-6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        </div>
+                        <b>TVアニメ『無職転生 ～異世界行ったら本気だす』ティザーPV／2021年1月10日(日)放送スタート</b>
+                        <p>PV1, 18/10/2019</p>
+                    </div>
+                    <div class="col-4">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/JoS7Z8MCD6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        </div>
+                        <b>TVアニメ『無職転生 ～異世界行ったら本気だす～』PV第3弾／2021年1月10日放送開始・毎週日曜24-00TOKYO MXほか</b>
+                        <p>PV 2, 08/07/2020</p>
+                    </div>
+                    <div class="col-4">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/PUzRndqfHbA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        </div>
+                        <b>TVアニメ『無職転生 ～異世界行ったら本気だす～』PV第2弾／1月10日(日)放送スタート</b>
+                        <p>PV 3, 18/12/2020</p>
+                    </div>
+                    <div class="col-4">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/fcSzGKfVkJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        </div>
+                        <b>『無職転生 ～異世界行ったら本気だす～』TVアニメ第2クールPV／2021年10月3日(日)放送開始</b>
+                        <p>PV 4, 01/09/2021</p>
+                    </div>
+                    <div class="col-4">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/BbbRytVhaDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        </div>
+                        <b>10-3(日)放送開始『無職転生 ～異世界行ったら本気だす～』TVアニメ第2クールPV第2弾</b>
+                        <p>PV5, 19/09/2021</p>
+                    </div>
+                    <div class="col-4">
+                        <div class="ratio ratio-16x9">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/tlDF3cfb8lA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        </div>
+                        <b>無職転生2期ティザーPV／TVアニメ『無職転生 Ⅱ ～異世界行ったら本気だす～』2023年放送</b>
+                        <p>SS2 PV1, 04/07/2022</p>
+                    </div>
+
+                </div>
+                <br />
+                <h3>Anime</h3>
+                <hr />
+                <div class="row text-center">
+                    <div class="col-6">
+                        <p style="padding-top:7em;"><b>Xem trọn bộ Anime tại Muse Việt Nam</b></p>
+
+                        <a target="_blank" href="https://www.youtube.com/watch?v=Z2a8lUYe8x8&list=PLdM751AKK4aMpwH92E0sQNVvf_UBrdJZb&ab_channel=MuseVi%E1%BB%87tNam" class="btn btn-outline-success" tabindex="-1" role="button" aria-disabled="true" style="width:300px;">Xem ngay</a>
+                    </div>
+                    <div class="col-6">
+                        <p><b>Khoảng khắc đẹp Rudeus sử dụng phép thuật Thủy Thánh</b></p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/SmxEH7K7B30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <footer id="footPage">
+
+        <div class="container-fluid bg-dark p-3 ">
+            <div class="row">
+                <div class="col">
+                    <p style="padding-left: 8.2em;">© Cổng thông tin Mushoku Tensei</p>
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col">
+
+                    <p style="padding-left:9.6em;">Liên Hệ: tmk283@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+<script type="text/javascript">
+    //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
+    window.onscroll = function () { scrollFunction() };
+    // khai báo hàm scrollFunction
+    function scrollFunction() {
+        // Kiểm tra vị trí hiện tại của con trỏ so với nội dung trang
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //nếu lớn hơn 20px thì hiện button
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            //nếu nhỏ hơn 20px thì ẩn button
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    //gán sự kiện click cho button
+    document.getElementById('myBtn').addEventListener("click", function () {
+        //Nếu button được click thì nhảy về đầu trang
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+</script>
+</html>

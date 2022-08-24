@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cổng thông tin Mushoku Tensei</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        #navBar, #Carousel_Mid, #main {
+            width: 100%;
+            display: block;
+            padding-bottom: 2em;
+        }
+
+            #navBar img {
+                width: 200px;
+            }
+
+            #Carousel_Mid img {
+                max-height: 540px;
+                max-width: 1296px;
+            }
+
+            #Carousel_Mid p {
+                color: #000000;
+                text-shadow: 2px 2px 8px #FF0000;
+            }
+
+            #Carousel_Mid button {
+                width: 150px;
+            }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        #main img {
+            width: 80%;
+        }
+
+        #main p {
+            font-size: 20px;
+        }
+
+        #main2 img {
+            width: 100%;
+        }
+
+        #main2 p {
+            font-size: 16px;
+        }
+
+        #footPage p {
+            color: #ffffff;
+        }
+
+        #myBtn {
+            display: none; /* Mặc định button sẽ được ẩn*/
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99; /* button được ưu tiên hiển thị đè lên các phần khác*/
+            border: none;
+            outline: none;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+            #myBtn:hover {
+                background-color: #555;
+            }
+    </style>
+
+</head>
+<body>
+    <button id="myBtn" title="Go to top" class="btn btn-primary">Top</button>
+    <div id="navBar">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="Index.html"><img src="Images/icon_navBar.webp" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Thế giới
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_lichSu.html">Lịch sử</a></li>
+                                <li><a class="dropdown-item" href="Index_diaLy.html">Địa lý</a></li>
+                                <li><a class="dropdown-item" href="Index_kiemThuat.html">Kiếm Thuật</a></li>
+                                <li><a class="dropdown-item" href="Index_phepThuat.html">Pháp thuật</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nhân vật
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Rudeus.html">Rudeus</a></li>
+                                <li><a class="dropdown-item" href="Index_Syl.html">Sylphiette</a></li>
+                                <li><a class="dropdown-item" href="Index_Roxy.html">Roxy</a></li>
+                                <li><a class="dropdown-item" href="Index_Eris.html">Eris</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Media
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Index_Anime.html">Anime</a></li>
+                                <li><a class="dropdown-item" href="Index_LN.html">Light Novel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div id="main">
+        <div class="container shadow-lg p-3 mb-5 bg-body rounded">
+            <h1>Phép Thuật</h1>
+            <h3>Mana</h3>
+            <hr />
+            <p>Phép Thuật yêu cầu một nguồn năng lượng trong thế giới vật chất . Mana là nguồn năng lượng tự nhiên để sử dụng phép thuật.</p>
+            <p>Tất cả những sinh vật trên sáu mặt của thế giới Mushoku Tensei đều có mana trong cơ thể. Và thường mất đi sau khi chết và có thể lẫn vào trong môi trường tự nhiên. Những người được chuyển sinh không có khả năng giữ mana bên trong cơ thể, do vậy họ không thể sử dụng phép thuật.</p>
+            <p>Mana hoặc nguồn năng lượng dự trữ phép thuật của người thường được cho là di truyền và tập luyện. Do sự tồn tại của ma thần Laplace đã phân tán các nhân tố Laplace để chuyển sinh trong tương lai , điều đó sẽ làm lượng mana trong cơ thể được tăng lên với số lượng khổng lồ nếu tập luyện khi dưới 6 tuổi.</p>
+            <h3>Các loại phép thuật</h3>
+            <hr />
+            <h4>Phép thuật tấn công</h4>
+            <p>Phép thuật tấn công bao gồm các phép điều khiển mana với các nguyên tố cơ bản. Sức mạnh, tốc độ, phạm vi hiệu quả phụ thuộc vào lượng mana.</p>
+            <ul>
+                <li>Hệ lửa</li>
+                <li>Hệ nước</li>
+                <li>Hệ gió</li>
+                <li>Hệ đất</li>
+
+            </ul>
+            <h4>Phép thuật chữa trị</h4>
+            <p>Phép thuật chữa trị bao gồm các phép thuật được sử dụng để chữa lành vết thương và loại bỏ chất độc</p>
+            <ul>
+                <li>Healing: Phép thuật chữa lành vết thương</li>
+                <li>Detoxification: Phép thuật loại bỏ độc và bệnh tật</li>
+                <li>Divine Strike: Phép thuật được sử dụng để chống lại quát vật và quỷ dữ</li>
+                <li>Protection: Phép thuật để tăng khả năng phòng thủ và màn bảo vệ</li>
+            </ul>
+            <h4>Phép thuật triệu hồi</h4>
+            <p>Phép thuật để triệu hồi được sử dụng để gọi ra những quái vật, Thánh Thú mạnh mẽ.</p>
+            <ul>
+                <li>
+                    Fiends: Tạo ra những quái vật có trí tuệ
+                </li>
+                <li>Spirits: Tạo ra tinh linh</li>
+
+            </ul>
+            <h4>Các bậc xếp hạng phép thuật</h4>
+            <hr />
+            <ol>
+                <li>Thần Cấp: Thao tác mana phức tạp. Có thể san bằng cả một lục địa ảnh hướng rất lớn với thế giới.</li>
+                <li>Đế Cấp: Thao tác mana phức tạp. Ảnh hướng lớn hơn Vương Cấp</li>
+                <li>Vương Cấp: Thao tác mana phức tạp. Ảnh hướng lớn hơn Thánh Cấp</li>
+                <li>Thánh Cấp: Thao tác mana phức tạp. Ảnh hưởng đến thời tiết</li>
+                <li>Cao Cấp: Thao tác mana phức tạp. Tạo vùng ảnh hưởng lớn</li>
+                <li>Trung Cấp: Thao tác mana nâng cao</li>
+                <li>Sơ Cấp: Thao tác mana cơ bản</li>
+            </ol>
+        </div>
+
+
+    </div>
+    <footer id="footPage">
+
+        <div class="container-fluid bg-dark p-3 ">
+            <div class="row">
+                <div class="col">
+                    <p style="padding-left: 8.2em;">© Cổng thông tin Mushoku Tensei</p>
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col">
+
+                    <p style="padding-left:9.6em;">Liên Hệ: tmk283@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+<script type="text/javascript">
+    //Khi người dùng cuộn chuột thì gọi hàm scrollFunction
+    window.onscroll = function () { scrollFunction() };
+    // khai báo hàm scrollFunction
+    function scrollFunction() {
+        // Kiểm tra vị trí hiện tại của con trỏ so với nội dung trang
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //nếu lớn hơn 20px thì hiện button
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            //nếu nhỏ hơn 20px thì ẩn button
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    //gán sự kiện click cho button
+    document.getElementById('myBtn').addEventListener("click", function () {
+        //Nếu button được click thì nhảy về đầu trang
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+</script>
+</html>
